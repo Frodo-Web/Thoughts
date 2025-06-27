@@ -10,3 +10,9 @@ VictoriaMetrics uses its own custom, high-performance, append-only block storage
 Раз она блочка то деплоить сторадж виктории в кубер это дичь. <br>
 В теории можно через S3 CSI Driver подмонтировать раздел и лить метрики туда, но S3 имеет большие задержки, а виктория ожидает быстрые диски, это может зааффектить. <br>
 Можно бекапы лить тулзой vmbackup (кронджоба)
+## Thanos
+Object storage (S3, GCS и т.д.). Прометеи хранят локально 2ч блоки, которые выгружаются в объектное хранилище.
+## Cortex
+Object storage или масштабируемая база. Использует block storage (как Thanos), иногда с индексами (DynamoDB и т.п.).
+## Grafana Mimir
+Только object storage (например, S3). Использует ту же блоковую схему, что и Cortex.
