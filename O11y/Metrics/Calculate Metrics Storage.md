@@ -5,7 +5,7 @@ Original Article - https://docs.victoriametrics.com/guides/understand-your-setup
 ls /sys/block/vda/device/driver/module/drivers/virtio\:virtio_blk/
 ```
 <img width="1890" height="660" alt="image" src="https://github.com/user-attachments/assets/ae24023f-8cd0-449a-af8d-0bb3a25ecb64" />
-
+NVMe passthrough is a virtualization technique that directly assigns a physical NVMe SSD and its PCIe controller to a virtual machine (VM), bypassing the host system's hypervisor to offer the VM dedicated, high-performance access to the drive
 State on 1st server:
 ```
 113G	/var/lib/victoria-metrics-data/indexdb
