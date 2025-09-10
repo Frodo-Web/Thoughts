@@ -10,7 +10,7 @@ State on 2nd server:
 46G  /var/lib/victoria-metrics-data/indexdb
 79G  /var/lib/victoria-metrics-data/data
 ```
-Тут видно что у второго довольно большой индекс по отношению к data. Это говорит о high churn rate - когда старые time series постоянно заменяются новыми (новые values в лейблах к примеру). - Например пересоздание подов генерирует такие события <br>
+Тут видно что у второго довольно большой индекс по отношению к data. Это говорит о high churn rate - когда старые time series постоянно заменяются новыми (новые values в лейблах к примеру) - Например пересоздание подов генерирует такие события <br>
 Важно не путать high churn rate с high cardinality, high cardinality - это когда много АКТИВНЫХ time series. Они не обяазтельно должны заменять старые <br>
 Unique timeseries stored in database
 ```
