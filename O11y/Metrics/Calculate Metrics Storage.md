@@ -9,6 +9,16 @@ ls /sys/block/vda/device/driver/module/drivers/virtio\:virtio_blk/
 
 NVMe passthrough is a virtualization technique that directly assigns a physical NVMe SSD and its PCIe controller to a virtual machine (VM), bypassing the host system's hypervisor to offer the VM dedicated, high-performance access to the drive <br>
 
+<img width="1374" height="962" alt="image" src="https://github.com/user-attachments/assets/9e184b83-5718-43f8-af92-5cfd8de565c2" />
+
+<img width="1700" height="648" alt="image" src="https://github.com/user-attachments/assets/45cb5285-dd4d-4b6f-a775-4d44fc2b8e4a" />
+
+<img width="1824" height="662" alt="image" src="https://github.com/user-attachments/assets/dcacc45d-54e0-49d7-bc3c-407db36e3490" />
+
+<img width="1770" height="824" alt="image" src="https://github.com/user-attachments/assets/1849266c-aee2-41cb-9dca-5d48145963ca" />
+
+<img width="988" height="278" alt="image" src="https://github.com/user-attachments/assets/edb6d48a-0c2a-4747-855a-aaa11ede3ac9" />
+
 State on 1st server:
 ```
 113G	/var/lib/victoria-metrics-data/indexdb
