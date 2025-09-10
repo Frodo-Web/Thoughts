@@ -4,6 +4,8 @@ Original Article - https://docs.victoriametrics.com/guides/understand-your-setup
 ```
 ls /sys/block/vda/device/driver/module/drivers/virtio\:virtio_blk/
 ```
+<img width="1890" height="660" alt="image" src="https://github.com/user-attachments/assets/ae24023f-8cd0-449a-af8d-0bb3a25ecb64" />
+
 State on 1st server:
 ```
 113G	/var/lib/victoria-metrics-data/indexdb
