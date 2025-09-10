@@ -28,6 +28,8 @@ sum(rate(vm_rows_inserted_total{instance=~".*kubemon.*"}[24h]))
 This gives us average sample size after compression
 ```
 sum(vm_data_size_bytes) / sum(vm_rows{type!~"indexdb.*"})
+sum(vm_data_size_bytes{instance=~".*kubemon.*"}) / sum(vm_rows{type!~"indexdb.*", instance=~".*kubemon.*"})
+
 
 // This gets us 0.3
 // 1.45 to 1.10 for 2nd - we can diagnose high cardinality issues probably
@@ -39,6 +41,6 @@ Bytes Per Sample * Ingestion rate * Replication Factor * (Retention Period in Se
 Calculation example
 ```
 (1 byte-per-sample * 940000 time series * 1 replication factor * 2592000 seconds) * 1.2 ) / 2^30 = 381 GB
-(1 byte-per-sample * 24749 time series * 1 replication factor * 2592000 seconds) * 1.2 ) / 2^30 = 381 GB
+(1.43 byte-per-sample * 12299 time series * 1 replication factor * (2592000 seconds * 4)) * 1.2 ) / 2^30 = 203 GB
 
 ```
