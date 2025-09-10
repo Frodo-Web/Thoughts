@@ -1,5 +1,10 @@
 # Calculate Storage
 Original Article - https://docs.victoriametrics.com/guides/understand-your-setup-size/ <br>
+State on 1st server:
+```
+113G	/var/lib/victoria-metrics-data/indexdb
+279G	/var/lib/victoria-metrics-data/data
+```
 State on 2nd server:
 ```
 46G  /var/lib/victoria-metrics-data/indexdb
@@ -24,11 +29,14 @@ sum(rate(vm_vminsert_metrics_read_total[24h]))
 
 sum(rate(vm_rows_inserted_total[24h]))
 sum(rate(vm_rows_inserted_total{instance=~".*kubemon.*"}[24h]))
+sum(rate(vm_rows_inserted_total{app_name=~".*prom.*"}[24h]))
+
 
 
 // These gets us 470 000 samples per second for 1 cluster - вырос с 420 до 470 за месяц
 // 12299 for 2nd
 // 12360 for 3rd
+// 1130000 for 4th
 ```
 This gives us average sample size after compression
 ```
