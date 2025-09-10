@@ -62,4 +62,5 @@ Calculation example
 (0.33 byte-per-sample * 470000 time series * 1 replication factor * 2592000 seconds) * 1.2 ) / 2^30 = 450 GB
 (0.33 byte-per-sample * 520000 time series * 1 replication factor * 2592000 seconds) * 1.2 ) / 2^30 = 500 GB - если ingestion рейт опять подрастёт на 50к то столько нужно на следующий месяц. 50 ГБ в месяц
 (1.43 byte-per-sample * 12299 time series * 1 replication factor * (2592000 seconds * 4)) * 1.2 ) / 2^30 = 205 GB
+(0.43 * 1130000 * (2592000 * 6) * 1 * 1.2) / 1073741824 = 8.4 TB
 ```
