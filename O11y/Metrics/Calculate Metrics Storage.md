@@ -1,5 +1,9 @@
 # Calculate Storage
 Original Article - https://docs.victoriametrics.com/guides/understand-your-setup-size/ <br>
+Виртуалка vmstorage с virtio_blk driver <br>
+```
+ls /sys/block/vda/device/driver/module/drivers/virtio\:virtio_blk/
+```
 State on 1st server:
 ```
 113G	/var/lib/victoria-metrics-data/indexdb
