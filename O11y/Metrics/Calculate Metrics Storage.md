@@ -5,15 +5,19 @@ State on 2nd server:
 46G  /var/lib/victoria-metrics-data/indexdb
 79G  /var/lib/victoria-metrics-data/data
 ```
-Total series
+Unique timeseries stored in database
 ```
-/api/v1/series/count
+curl http://server1/api/v1/series/count
 ..
-{
-  "status": "success",
-  "data": [236108482]
-}
+{"status":"success","data":[349613065]}
+
+curl http://server3:8428/api/v1/series/count
+..
+{"status":"success","data":[293375582]}
+
+Разница 16%. У первого ретеншн 1 месяц, у третьего 4 месяца. 
 ```
+Ingestion rate
 ```
 // Ingestion rate before replication
 sum(rate(vm_vminsert_metrics_read_total[24h]))
