@@ -1,9 +1,14 @@
 # Storage Backends
 ## Terms
 Erasure coding - a technique used in data protection and data storage that distributes redundant information across multiple storage nodes, allowing the system to recover from the loss of data without the need for a complete copy of each piece
+
 ## Longhorn
-- Бекапы в S3, NFS, Cloud из коробки, по 500 ГБ тома
+- Эффективные block-change detection бекапы в S3, NFS, Cloud из коробки, по 500 ГБ тома
+- Есть поддержка репликации данных на других ноды
+- Инкрементальные снапшоты
 - Не поддерживает erasure coding
+- RWX
+- Ставится в куб
 
 ## Ceph
 - RWX
