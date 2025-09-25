@@ -7,7 +7,7 @@ Erasure coding - a technique used in data protection and data storage that distr
 - Есть поддержка репликации данных на других ноды. Нужно понимать что это создаёт в целом более высокую write iops нагрузку на кластер. https://longhorn.io/docs/archives/1.4.0/high-availability/data-locality/#data-locality-settings
 - Инкрементальные снапшоты
 - Не поддерживает erasure coding
-- RWX
+- Для поддержки RWX томов требуется установленный NFSv4 client на нодах
 - Ставится в куб
 - Hyper-converged solution
 - Есть жалобы на write perfomance у распределлёных кластеров БД, но возможно тут можно репликации избежать
