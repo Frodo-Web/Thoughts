@@ -10,6 +10,8 @@ Erasure coding - a technique used in data protection and data storage that distr
 - RWX
 - Ставится в куб
 - Hyper-converged solution
+- Есть жалобы на write perfomance у распределлёных кластеров БД, но возможно тут можно репликации избежать
+- Может порождать репликацию репликации, например кластер Patroni, etcd
 
 ## Rook + CephFS
 - Build on top of распредленное объектное хранилище RADOS
