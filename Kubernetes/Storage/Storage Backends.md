@@ -4,7 +4,7 @@ Erasure coding - a technique used in data protection and data storage that distr
 
 ## Longhorn
 - Эффективные block-change detection бекапы в S3, NFS, Cloud из коробки, по 500 ГБ тома
-- Есть поддержка репликации данных на других ноды. Нужно понимать что это создаёт в целом более высокую нагрузку на кластер. https://longhorn.io/docs/archives/1.4.0/high-availability/data-locality/#data-locality-settings
+- Есть поддержка репликации данных на других ноды. Нужно понимать что это создаёт в целом более высокую write iops нагрузку на кластер. https://longhorn.io/docs/archives/1.4.0/high-availability/data-locality/#data-locality-settings
 - Инкрементальные снапшоты
 - Не поддерживает erasure coding
 - RWX
