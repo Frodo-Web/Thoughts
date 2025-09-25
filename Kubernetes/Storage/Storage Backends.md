@@ -9,6 +9,7 @@ Erasure coding - a technique used in data protection and data storage that distr
 - Не поддерживает erasure coding
 - RWX
 - Ставится в куб
+- Hyper-converged solution
 
 ## Rook + CephFS
 - Build on top of распредленное объектное хранилище RADOS
