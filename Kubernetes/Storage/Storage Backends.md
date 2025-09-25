@@ -11,7 +11,8 @@ Erasure coding - a technique used in data protection and data storage that distr
 - Ставится в куб
 - Hyper-converged solution
 - Есть жалобы на write perfomance у распределлёных кластеров БД, но возможно тут можно репликации избежать
-- Может порождать репликацию репликации, например кластер Patroni, etcd.  I hear you like distributed replication so we put distributed replication on your distributed replication so you can replicate your replications while you distribute your distributions.. 
+- Может порождать репликацию репликации, например кластер Patroni, etcd.  I hear you like distributed replication so we put distributed replication on your distributed replication so you can replicate your replications while you distribute your distributions..
+- The benefit of Longhorn here would just be the easy exposure and management of block storage. Where node local storage wouldn't have easy migration / backup capabilities or a management GUI. 
 
 ## Rook + CephFS
 - Build on top of распредленное объектное хранилище RADOS
