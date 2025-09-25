@@ -18,6 +18,22 @@ If it was smallish sure since less things to go wrong <br>
 - Higher operational overhead: Managing two separate systems
 - Network complexity: Additional network considerations between K8s and Ceph
 - Cost: Additional hardware/cloud instances required
+
+### Ceph-in-Kubernetes (via Rook)
+#### Pros ✅
+- Unified management: Everything managed through Kubernetes
+- Resource efficiency: Can share infrastructure (good for dev/test/small prod)
+- Automated operations: Rook handles much of Ceph's complexity
+- Faster deployment: Quick to get up and running
+- Cost-effective: No additional infrastructure needed
+- GitOps friendly: Entire setup can be version-controlled
+#### Cons ❌
+- Resource contention: Ceph pods compete with application pods
+- Complex debugging: Storage and compute issues can be intertwined
+- Limited scalability: Performance bottlenecks as cluster grows
+- Upgrade complexity: Upgrading Ceph may impact applications
+- Operational risk: Issues in Ceph can destabilize entire Kubernetes cluster
+- Not ideal for high-performance workloads: Shared resources limit IOPS/throughput
 ## RBD-mirroring
 Интересно можно сделать так
 ```
