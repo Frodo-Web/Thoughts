@@ -3,6 +3,7 @@ This is my opinion, but I rather have ceph external for any large k8s deployment
 If it was smallish sure since less things to go wrong
 ## RBD-mirroring
 Интересно можно сделать так
+```
 ┌────────────────┐     ┌────────────────┐
 │     Site A     │     │     Site B     │
 │ ┌────────────┐ │     │ ┌────────────┐ │
@@ -17,6 +18,7 @@ If it was smallish sure since less things to go wrong
 │ │   Node 3   │ │     │ │   Node 3   │ │
 │ └────────────┘ │     │ └────────────┘ │
 └────────────────┘     └────────────────┘
-
+```
 Чтобы например был Cluster Mesh, в обоих Ceph, в один Ceph идёт зеркалирование. <br>
-Но оба Ceph доступны на чтение, а один работает на запись
+Но оба Ceph доступны на чтение, а один работает на запись <br>
+Но это хрень наверно, я думаю nvme устройства оптимизированы на то что параллельно могут обрабатывать чтение и запись, какие нибудь буферы, очереди и так далее работают
