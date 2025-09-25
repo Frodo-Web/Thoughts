@@ -23,6 +23,9 @@ Erasure coding - a technique used in data protection and data storage that distr
 - Нет распределения
 - RWX
 
+## OpenEBS Mayastor
+- Есть поддержка репликации данных на других ноды
+
 ## FUSE FS implementation over S3 
 - GeeseFS от яндекса самое норм - больше возможностей, s3fs имеет плохие отзывы
 - Конечно производительность будет желать лучшего
