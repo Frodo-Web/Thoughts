@@ -1,10 +1,14 @@
 # Storage Backends
+## Terms
+Erasure coding - a technique used in data protection and data storage that distributes redundant information across multiple storage nodes, allowing the system to recover from the loss of data without the need for a complete copy of each piece
 ## Longhorn
 - Бекапы в S3, NFS, Cloud из коробки, по 500 ГБ тома
+- Не поддерживает erasure coding
 
 ## Ceph
 - RWX
 - Если сломается, тяжело восстанавливать
+- Поддерживает erasure coding
 
 ## Linstor
 - Оркестрация блочкой в датацентре и не только
@@ -13,6 +17,10 @@
 - Простота настройки
 - Нет распределения
 - RWX
+
+## FUSE FS implementation over S3 
+- GeeseFS от яндекса самое норм - больше возможностей, s3fs имеет плохие отзывы
+- Конечно производительность будет желать лучшего
 
 ## Общее
 - Базы могут не понимать на каком типе сторадж работают, и ожидать большего - это может плохо сказываться.
