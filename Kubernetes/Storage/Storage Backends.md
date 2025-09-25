@@ -11,7 +11,7 @@ Erasure coding - a technique used in data protection and data storage that distr
 - Ставится в куб
 - Hyper-converged solution
 - Есть жалобы на write perfomance у распределлёных кластеров БД, но возможно тут можно репликации избежать
-- Может порождать репликацию репликации, например кластер Patroni, etcd
+- Может порождать репликацию репликации, например кластер Patroni, etcd.  I hear you like distributed replication so we put distributed replication on your distributed replication so you can replicate your replications while you distribute your distributions.. 
 
 ## Rook + CephFS
 - Build on top of распредленное объектное хранилище RADOS
