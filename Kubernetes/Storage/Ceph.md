@@ -12,6 +12,12 @@ If it was smallish sure since less things to go wrong <br>
 - Easier upgrades: Can upgrade Ceph independently of Kubernetes
 - Predictable performance: No noisy neighbor problems from application pods
 - Better for large-scale: More suitable for production environments with significant storage needs
+
+#### Cons ❌
+- Additional infrastructure: Need separate servers/machines for Ceph
+- Higher operational overhead: Managing two separate systems
+- Network complexity: Additional network considerations between K8s and Ceph
+- Cost: Additional hardware/cloud instances required
 ## RBD-mirroring
 Интересно можно сделать так
 ```
