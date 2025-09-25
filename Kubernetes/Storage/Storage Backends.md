@@ -15,6 +15,7 @@ Erasure coding - a technique used in data protection and data storage that distr
 - Поддерживает erasure coding
 - RWX
 - Если сломается, тяжело восстанавливать
+- Есть RDB, есть file storage, есть возможность S3
 
 ## Linstor
 - Оркестрация блочкой в датацентре и не только
