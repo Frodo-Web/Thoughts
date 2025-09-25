@@ -10,10 +10,11 @@ Erasure coding - a technique used in data protection and data storage that distr
 - RWX
 - Ставится в куб
 
-## Ceph
+## Rook + CephFS
+- Build on top of распредленное объектного хранилища RADOS
+- Поддерживает erasure coding
 - RWX
 - Если сломается, тяжело восстанавливать
-- Поддерживает erasure coding
 
 ## Linstor
 - Оркестрация блочкой в датацентре и не только
