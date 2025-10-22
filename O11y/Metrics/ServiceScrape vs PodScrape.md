@@ -4,4 +4,5 @@ Great explanation. I want to add a little clarifying detail for readers who have
 Короче, скрейп джобы прометеусов, вмагентов не балансируются через Service при использовании ServiceScrape. Оператор полагается и находит Endpoints тип и прописывает таргеты. Поэтому ServiceScrape скрейпит также все поды. <br>
 You actually CAN annotate the Service and scrape a random Pod. But it’s only useful in rare cases. Usually you want to scrape all the Pods, so you annotate the Pod template. <br>
 Если где вне куба используются балансеры, то через них ходить не рекомендуется для скрейпинга. <br>
-Но например PodScrape можно использовать в случае, когда пода снимается с балансировки (убирается из эндоинтов Service). Например, когда она останавливается или стартует. PodScrape будет собирать метрики.
+Но например PodScrape можно использовать в случае, когда пода снимается с балансировки (убирается из эндоинтов Service). Например, когда она останавливается или стартует. PodScrape будет собирать метрики. <br>
+scraping metric endpoints via a load balancer is an antipattern in prometheus. Best practice is to scrape directly and this is why ServiceMonitor is examining all endpoints in a Service and scraping them this way. <br>
