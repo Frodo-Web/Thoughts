@@ -18,3 +18,11 @@
 К чему приведёт Liveness проба на коннект к СУБД?
 
 ## Startup
+- Purpose: Indicates when the application has finished starting up. Disables liveness/readiness checks during startup.
+- For slow-starting apps (e.g., JVM-based services, apps that load large datasets).
+- Prevents premature killing by liveness probes or traffic routing by readiness probes.
+
+
+
+## Итог
+Я бы сказал Startup проба - на внутреннюю инициализацию приложения, что может происходить долго у некоторых, Readiness проба - на инициализацию зависимостей приложения (установку соединения, кешей), Liveness проба - на нормальную жизнедеятельность самого приложения
