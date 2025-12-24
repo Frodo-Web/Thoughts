@@ -17,8 +17,31 @@
 
 ⚠️ Use selectively—only when truly needed. Some teams avoid liveness probes altogether and rely on app self-termination or external monitoring instead.
 
-К чему приведёт Liveness проба на коннект к СУБД?
+### К чему приведёт Liveness проба на коннект к СУБД?
+```
+❌ 1. Confuses Application Health with Dependency Health
+Liveness probes should only reflect whether the application itself is alive, not whether its dependencies (like databases) are available.
+If the database is down but your app is otherwise running fine, Kubernetes will restart your healthy pod, which won’t fix the underlying DB issue and may even increase load (e.g., reconnections, bootstrap overhead).
+🔁 Result: Unnecessary restarts → cascading failures, service disruption, or prolonged outages.
 
+❌ 2. Amplifies Outages
+Imagine a temporary database hiccup (e.g., network blip, failover, maintenance).
+If all app pods fail liveness due to DB unavailability, Kubernetes kills and restarts them simultaneously.
+When they restart, they all try to reconnect to the DB at once, potentially overwhelming it further.
+📉 This turns a minor, transient issue into a full-blown cascading failure.
+
+❌ 3. Violates Responsibility Boundaries
+Liveness probe: “Is my process stuck or deadlocked?” → If yes, restart it.
+Readiness probe: “Am I ready to serve traffic?” → If DB is down, return not ready; traffic stops flowing, but the pod stays alive.
+External monitoring/alerting: “Is the database up?” → Handled separately by SRE/observability tools.
+```
+
+Вместо этого:
+```
+Handle DB failures gracefully in code:
+Use retries, circuit breakers, or fallbacks.
+Log errors and alert via monitoring (e.g., Prometheus), but don’t crash the pod.
+```
 ## Startup
 - Purpose: Indicates when the application has finished starting up. Disables liveness/readiness checks during startup.
 - For slow-starting apps (e.g., JVM-based services, apps that load large datasets).
