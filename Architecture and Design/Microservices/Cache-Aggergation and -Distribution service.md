@@ -6,3 +6,4 @@
 CPU cache of executing program -> Disk cache -> Local cache service via Unix Domain Socket (for example) -> External Cache systems (like in memory DB) -> Actual Databases or data storages (Like S3, Ceph) <br>
 И интересно оценить как это может повлиять на конечную стоимость. Если часть инфраструктуры храним локально, а другую в облаке. За счёт кеш систем снижаем облачные расходы. <br>
 Интересно рассматривать такое как Переходный момент в стартапе, от облачной инфры на Self Hosted <br>
+Это какая то Subscription Cache Model, есть ещё TTL <br>
